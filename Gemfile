@@ -16,6 +16,8 @@ gem 'wicked'
 
 #datatables
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+#excel import
+gem 'roo'
 
 #chat with private pub and thin to srve faye
 gem "private_pub"

@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   resources :tasks
   resources :pay_others
   resources :pay_fees
-  resources :students
+  resources :students do
+    collection { post :import }
+  end
   resources :teachers
+  
   get 'home/index'
   root 'home#index'
 

@@ -5,6 +5,13 @@
   Download:
   <%= link_to "Excel", students_path(format: "xls") %>
 </p>
+<p>
+  <h2> Import Students: </h2>  <!-- only visible if someone with admin roles is logged in-->
+  <%= form_tag import_students_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+  <% end %>
+</p>
 <table id="students" class="display" >
   <thead><!-- datatable relies on thead and tbody tags. remember that-->
     <tr>
