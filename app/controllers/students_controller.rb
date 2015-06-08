@@ -5,6 +5,11 @@ class StudentsController < ApplicationController
   # GET /students.json
   def index
     @students = Student.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @students.to_csv }
+      format.xls # { send_data @students.to_csv(col_sep: "\t") }
+    end
   end
 
   # GET /students/1

@@ -1,14 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Students</h1>
-<p>
-  Download:
-  <%= link_to "Excel", students_path(format: "xls") %>
-</p>
-<table id="students" class="display" >
+<!-- table that i want to export. write xml code to make it look more like excel format. -->
+<table>
   <thead><!-- datatable relies on thead and tbody tags. remember that-->
     <tr>
-      <th></th>
       <th>Full name</th>
       <th>Adm no</th>
       <th>Age</th><!-- make a few calculations and convert this to age. current year minus dob-->
@@ -16,25 +9,34 @@
       <th>Nationality</th>
       <th>Form</th>
       <th>Class teacher</th>
+      <th>Address</th>
+      <th>Phone 1</th>
+      <th>Phone 2</th>
+      <th>Email</th>
+      <th>Town</th>
+      <th>County</th>
+      <th>Adm Date</th>
     </tr>
   </thead>
 
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <td><%= link_to (image_tag student.image.url), student %></td>
-        <td><%= link_to (student.full_name),student %></td>
-        <td><%= link_to (student.Adm_No), student %></td>
+        <td><%= student.full_name %></td>
+        <td><%= student.Adm_No %></td>
         <td><%= student.birth_date %></td>
         <td><%= student.gender %></td>
         <td><%= student.nationality %></td>
         <td><%= student.form %> <%= student.stream %></td>
         <td><%= student.class_teacher %></td>
+        <td><%= student.address %></td>
+        <td><%= student.phone_1 %></td>
+        <td><%= student.phone_2 %></td>
+        <td><%= student.email %></td>
+        <td><%= student.town %></td>
+        <td><%= student.county %></td>
+        <td><%= student.Adm_date %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Student', new_student_path %>
