@@ -1,0 +1,13 @@
+safe keeping
+<% @students.each do |student| %>
+      <tr>
+        <td><%= link_to (image_tag student.image.url), student %></td>
+        <td><%= link_to (student.full_name),student %></td>
+        <td><%= link_to (student.Adm_No), student %></td>
+        <td><%= student.birth_date %></td>
+        <td><%= student.gender %></td>
+        <td><%= student.nationality %></td>
+        <td><%= student.form %> <%= student.stream %></td>
+        <td><%= student.class_teacher %></td>
+      </tr>
+    <% end %>
