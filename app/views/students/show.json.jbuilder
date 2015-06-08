@@ -1,0 +1,1 @@
+json.extract! @student, :id, :full_name, :Adm_No, :birth_date, :gender, :nationality, :form, :stream, :class_teacher, :address, :phone_1, :phone_2, :email, :town, :county, :Adm_date, :created_at, :updated_at

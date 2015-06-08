@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  form: MyString
+  stream: MyString
+  classteacher: MyString
+
+two:
+  form: MyString
+  stream: MyString
+  classteacher: MyString

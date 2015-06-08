@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Students</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Full name</th>
+      <th>Adm no</th>
+      <th>Age</th><!-- make a few calculations and convert this to age. current year minus dob-->
+      <th>Gender</th>
+      <th>Nationality</th>
+      <th>Form</th>
+      <th>Class teacher</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= link_to (image_tag student.image.url), student %></td>
+        <td><%= link_to (student.full_name),student %></td>
+        <td><%= link_to (student.Adm_No), student %></td>
+        <td><%= student.birth_date %></td>
+        <td><%= student.gender %></td>
+        <td><%= student.nationality %></td>
+        <td><%= student.form %> <%= student.stream %></td>
+        <td><%= student.class_teacher %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student', new_student_path %>

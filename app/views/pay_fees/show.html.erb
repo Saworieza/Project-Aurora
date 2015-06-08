@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student name:</strong>
+  <%= @pay_fee.student_name %>
+</p>
+
+<p>
+  <strong>Adm no:</strong>
+  <%= @pay_fee.Adm_no %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @pay_fee.form %>
+</p>
+
+<p>
+  <strong>Stream:</strong>
+  <%= @pay_fee.stream %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @pay_fee.amount %>
+</p>
+
+<p>
+  <strong>Pay method:</strong>
+  <%= @pay_fee.pay_method %>
+</p>
+
+<%= link_to 'Edit', edit_pay_fee_path(@pay_fee) %> |
+<%= link_to 'Back', pay_fees_path %>

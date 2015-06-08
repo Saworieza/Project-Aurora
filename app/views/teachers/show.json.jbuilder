@@ -1,0 +1,1 @@
+json.extract! @teacher, :id, :full_name, :employer, :employee_number, :employment_date, :birth_date, :marital_status, :nationality, :home_address, :phone_1, :phone_2, :email, :town, :county, :education, :certifications, :subjects, :created_at, :updated_at

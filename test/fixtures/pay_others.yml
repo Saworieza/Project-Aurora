@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_name: MyString
+  adm_no: MyString
+  form: MyString
+  stream: MyString
+  amount: 1
+  payment_for: MyString
+  pay_method: MyString
+
+two:
+  student_name: MyString
+  adm_no: MyString
+  form: MyString
+  stream: MyString
+  amount: 1
+  payment_for: MyString
+  pay_method: MyString
