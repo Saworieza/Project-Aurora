@@ -24,7 +24,7 @@ class StudentsController < ApplicationController
 
   # GET /students/new
   def new
-    @teacher = Teacher.find(params[:id])
+    #@teacher = Teacher.find(params[:id])
     @student = Student.new
   end
 
