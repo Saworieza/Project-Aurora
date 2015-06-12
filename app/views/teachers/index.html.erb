@@ -1,54 +1,36 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Teachers</h1>
-
-<table>
+<p>
+  Download:
+  <%= link_to "Excel", teachers_path(format: "xls") %>
+</p>
+<!--<p>
+  <h2> Import Students: </h2>  <!-- only visible if someone with admin roles is logged in-->
+  <!--<%= form_tag import_students_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+  <% end %>
+</p>-->
+<table  id="teachers" class="display" >
   <thead>
     <tr>
       <th></th>
       <th>Full name</th>
       <th>Employer</th>
-      <th>Employee number</th>
-      <th>Employment date</th>
-      <th>Birth date</th>
-      <th>Marital status</th>
       <th>Nationality</th>
-      <th>Home address</th>
-      <th>Phone 1</th>
-      <th>Phone 2</th>
-      <th>Email</th>
-      <th>Town</th>
-      <th>County</th>
-      <th>Education</th>
-      <th>Certifications</th>
       <th>Subjects</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @teachers.each do |teacher| %>
       <tr>
-        <td><%= image_tag teacher.image.url %></td>
-        <td><%= teacher.full_name %></td>
+        <td><%= link_to (image_tag teacher.image.url),teacher %></td>
+        <td><%= link_to (teacher.full_name),teacher %></td>
         <td><%= teacher.employer %></td>
-        <td><%= teacher.employee_number %></td>
-        <td><%= teacher.employment_date %></td>
-        <td><%= teacher.birth_date %></td>
-        <td><%= teacher.marital_status %></td>
         <td><%= teacher.nationality %></td>
-        <td><%= teacher.home_address %></td>
-        <td><%= teacher.phone_1 %></td>
-        <td><%= teacher.phone_2 %></td>
-        <td><%= teacher.email %></td>
-        <td><%= teacher.town %></td>
-        <td><%= teacher.county %></td>
-        <td><%= teacher.education %></td>
-        <td><%= teacher.certifications %></td>
         <td><%= teacher.subjects %></td>
-        <td><%= link_to 'Show', teacher %></td>
-        <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
-        <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

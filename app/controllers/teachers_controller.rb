@@ -5,6 +5,16 @@ class TeachersController < ApplicationController
   # GET /teachers.json
   def index
     @teachers = Teacher.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @teachers.to_csv }
+      format.xls # { send_data @students.to_csv(col_sep: "\t") }
+    end
+  end
+
+  def import
+    Teacher.import(params[:file])
+    redirect_to teachers_url, notice: "Teachers Imported"
   end
 
   # GET /teachers/1
